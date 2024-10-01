@@ -1,0 +1,474 @@
+{
+	"info": {
+		"_postman_id": "4add274b-cd12-46cd-bacb-84d5d5bd52fd",
+		"name": "Pruebas Microservicios_PruebaTecnica_Jefferson Guasumba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38605244"
+	},
+	"item": [
+		{
+			"name": "Microservicio1_Cliente_Persona",
+			"item": [
+				{
+					"name": "Obtiene todos los Clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Cliente por Cedula",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Clientes/1724294127",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Clientes",
+								"1724294127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserta un Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Genero",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "Nombre",
+									"value": "Jefferson",
+									"type": "text"
+								},
+								{
+									"key": "Telefono",
+									"value": "0983875112",
+									"type": "text"
+								},
+								{
+									"key": "Direccion",
+									"value": "Pintado",
+									"type": "text"
+								},
+								{
+									"key": "Identificacion",
+									"value": "172429127",
+									"type": "text"
+								},
+								{
+									"key": "Contrasenia",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Clientes/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modifica Cliente por Cedula",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Genero",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "Nombre",
+									"value": "Jefferson Lucero",
+									"type": "text"
+								},
+								{
+									"key": "Telefono",
+									"value": "3108113",
+									"type": "text"
+								},
+								{
+									"key": "Direccion",
+									"value": "Chilibulo",
+									"type": "text"
+								},
+								{
+									"key": "Contrasenia",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "Identificacion",
+									"value": "1724294127",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Clientes/1724294127",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Clientes",
+								"1724294127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminina Cliente por Cedula",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Clientes/1724294127",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Clientes",
+								"1724294127"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Microservicio2_Cuenta_Movimientos",
+			"item": [
+				{
+					"name": "Obtiene las cuentas registradas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Registra una cuenta y el primer movimiento por defecto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "CedulaCliente",
+									"value": "172429127",
+									"type": "text"
+								},
+								{
+									"key": "NumeroCuenta",
+									"value": "2204229520",
+									"type": "text"
+								},
+								{
+									"key": "TipoCuenta",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SaldoInicial",
+									"value": "800.50",
+									"type": "text"
+								},
+								{
+									"key": "Estado",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5003/api/Cuenta",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Cuenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modifica la cuenta y el primer movimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "NumeroCuenta",
+									"value": "2204229520",
+									"type": "text"
+								},
+								{
+									"key": "TipoCuenta",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "SaldoInicial",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "Estado",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5003/api/Cuenta",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Cuenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene cuenta por numero de cuenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Elimina la cuenta y los movimientos asociados",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5003/api/Cuenta/2204229521",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Cuenta",
+								"2204229521"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene todos los Movimientos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Registra un movimiento si cumple todas las validaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ValorMovimiento",
+									"value": "500.50",
+									"type": "text"
+								},
+								{
+									"key": "NumeroCuenta",
+									"value": "2204229521",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5003/api/Movimiento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Movimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene Movimientos por Número de Cuenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Modifica el movimiento por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "IdMovimiento",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "FechaMovimiento",
+									"value": "2024-09-29",
+									"type": "text"
+								},
+								{
+									"key": "DescMovimiento",
+									"value": "Retiro de 500",
+									"type": "text"
+								},
+								{
+									"key": "TipoMovimiento",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ValorMovimiento",
+									"value": "-500",
+									"type": "text"
+								},
+								{
+									"key": "Saldo",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "NumeroCuenta",
+									"value": "2204229526",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5003/api/Movimiento/20",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Movimiento",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Elimina movimiento por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5003/api/Movimiento/10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Movimiento",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene el reporte de movimientos por identificación y fechas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
